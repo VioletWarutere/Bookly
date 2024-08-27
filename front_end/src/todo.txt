@@ -1,0 +1,3 @@
+- fix likes and dislikes
+- allow deleting of my Books
+
