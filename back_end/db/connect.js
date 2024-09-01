@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const connectionString = "mongodb://localhost:27017/vioLibrary";
+const connectionString = "mongodb+srv://violetwarutere:violetwarutere@violet-atlas.ublwfkn.mongodb.net/Bookly";
 
 const connect_db = async () => {
   
