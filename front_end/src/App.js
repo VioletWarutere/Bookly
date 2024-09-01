@@ -29,13 +29,14 @@ import DeleteMyBook from "./Components/Books/DeleteMyBook";
 
 function App() {
   const token = Cookies.get("token");
+ 
 
   return (
     <div className="App">
       <>
         {token ? (
+          <Router>
           <Wrapper>
-            <Router>
               <Routes>
                 <Route path="/" exact element={<HomePage />} />
                 <Route path="/auth" exact element={<Auth />} />
@@ -67,16 +68,19 @@ function App() {
                 <Route path="/google-books" element={<BooksList />} />
                 <Route path="/post-book/:id" element={<PostGoogleBook />} />
               </Routes>
-            </Router>
           </Wrapper>
+            </Router>
         ) : (
           <>
-            <Router>
+
+          
+
+             <Router>
               <Routes>
                 <Route path="/" exact element={<LandingPage />} />
                 <Route path="/auth" exact element={<Auth />} />
               </Routes>
-            </Router>
+            </Router> 
           </>
         )}
       </>

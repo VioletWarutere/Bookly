@@ -21,7 +21,7 @@ const Login = ({setShowLoginForm }) => {
 
   
 
-  const handleLogin = () => {
+/*   const handleLogin = () => {
     const savedTime = localStorage.getItem('registrationTime');
     if (savedTime) {
       const savedDate = new Date(savedTime);
@@ -33,7 +33,7 @@ const Login = ({setShowLoginForm }) => {
       } else{
         window.location.replace('/'); 
       }
-  }};
+  }}; */
 
  
 
@@ -55,7 +55,7 @@ const Login = ({setShowLoginForm }) => {
         console.log(data);
         Cookies.set('token', data.token, { expires: threeHoursLater }); // Set the token to expire in 3 hours
         
-        handleLogin(); 
+        window.location.replace('/');
         
       } else {
         alert(`Please confirm your username and password then try again.`);

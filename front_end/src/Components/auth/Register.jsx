@@ -5,11 +5,11 @@ import { BASE_URL } from "../../utils/backend_services";
 
 const Register = ({ setShowLoginForm}) => {
 
-  const handleRegister = () => {
+  /* const handleRegister = () => {
     const now = new Date();
     localStorage.setItem('registrationTime', now.toString());
     alert('Registration time saved!');
-  };
+  };  */
 
   const newFormData = new FormData();
   
@@ -172,7 +172,7 @@ const Register = ({ setShowLoginForm}) => {
         </div>
 
         <div className="col mt-4 ">
-          <button type="submit" className="btn btn-dark" onClick={handleRegister}>
+          <button type="submit" className="btn btn-dark"/*  onClick={handleRegister} */>
             Register
           </button>
         </div>

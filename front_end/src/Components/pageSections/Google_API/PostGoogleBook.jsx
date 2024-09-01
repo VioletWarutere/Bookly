@@ -71,7 +71,7 @@ const PostGoogleBook = () => {
       });
 
       console.log(`Book post successful: ${response}`);
-      window.location.reload();
+      window.location.replace('/books');
     } catch (error) {
       console.log(`Post failed due to ${error.message}`);
     }
