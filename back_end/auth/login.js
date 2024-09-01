@@ -29,6 +29,7 @@ const loginUser = async(req, res) => {
 
     } catch (error) {
         res.status(500).send({ 'message': error.message});
+        console.log(error.message);
     }
 };
 
