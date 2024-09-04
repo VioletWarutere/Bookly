@@ -1,7 +1,10 @@
 import "./cssFiles/App.css";
-import Auth from "./Components/auth/Auth";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Cookies from "js-cookie";
+import { GetBooksProvider } from "../src/context/Getbooks";
+import { GetRequestsProvider } from "./context/Getrequests";
+
+import Auth from "./Components/auth/Auth";
 import Wrapper from "./Components/pageSections/Wrapper";
 import HomePage from "./Pages/HomePage";
 import ViewBook from "./Components/Books/ViewBook";
@@ -29,58 +32,81 @@ import DeleteMyBook from "./Components/Books/DeleteMyBook";
 
 function App() {
   const token = Cookies.get("token");
- 
 
   return (
     <div className="App">
       <>
         {token ? (
-          <Router>
-          <Wrapper>
-              <Routes>
-                <Route path="/" exact element={<HomePage />} />
-                <Route path="/auth" exact element={<Auth />} />
-                <Route path="/recommendations" exact element={<Favorites />} />
-                <Route path="/profilePage" exact element={<ProfilePage />} />
-                <Route path="/books" exact element={<Books />} />
-                <Route path="/books/:id" element={<ViewBook />} />
-                <Route path="/books/likes/:id" element={<Likes />} />
-                <Route path="/books/post" element={<PostBook />} />
-                <Route path="/books/update/:id" element={<UpdateBook />} />
-                <Route path="/books/delete/:id" element={<DeleteBook />} />
-                <Route path="/books/myBooks" element={<MyCollection />} />
-                <Route path="/delete-myBook/:id" element={<DeleteMyBook />} />
-                <Route path="/books/requests" element={<RequestPage />} />
-                <Route path="/requests/post" element={<PostRequest />} />
-                <Route path="/request/:id" element={<ViewRequest />} />
-                <Route
-                  path="/request-to-book/:id"
-                  element={<RequestToBook />}
-                />
-                <Route path="/contributions" element={<Contributions />} />
-                <Route path="/delete-book" element={<DeleteBook />} />
-                <Route path="/delete-comment/:id" element={<DeleteComment />} />
-                <Route path="/delete-request/:id" element={<DeleteRequest />} />
-                <Route path="/update-request/:id" element={<UpdateRequest />} />
-                <Route path="/update-request/:id" element={<UpdateRequest />} />
+          <GetBooksProvider>
+            <GetRequestsProvider>
+              <Router>
+                <Wrapper>
+                  <Routes>
+                    <Route path="/" exact element={<HomePage />} />
+                    <Route path="/auth" exact element={<Auth />} />
+                    <Route
+                      path="/recommendations"
+                      exact
+                      element={<Favorites />}
+                    />
+                    <Route
+                      path="/profilePage"
+                      exact
+                      element={<ProfilePage />}
+                    />
+                    <Route path="/books" exact element={<Books />} />
+                    <Route path="/books/:id" element={<ViewBook />} />
+                    <Route path="/books/likes/:id" element={<Likes />} />
+                    <Route path="/books/post" element={<PostBook />} />
+                    <Route path="/books/update/:id" element={<UpdateBook />} />
+                    <Route path="/books/delete/:id" element={<DeleteBook />} />
+                    <Route path="/books/myBooks" element={<MyCollection />} />
+                    <Route
+                      path="/delete-myBook/:id"
+                      element={<DeleteMyBook />}
+                    />
+                    <Route path="/books/requests" element={<RequestPage />} />
+                    <Route path="/requests/post" element={<PostRequest />} />
+                    <Route path="/request/:id" element={<ViewRequest />} />
+                    <Route
+                      path="/request-to-book/:id"
+                      element={<RequestToBook />}
+                    />
+                    <Route path="/contributions" element={<Contributions />} />
+                    <Route path="/delete-book" element={<DeleteBook />} />
+                    <Route
+                      path="/delete-comment/:id"
+                      element={<DeleteComment />}
+                    />
+                    <Route
+                      path="/delete-request/:id"
+                      element={<DeleteRequest />}
+                    />
+                    <Route
+                      path="/update-request/:id"
+                      element={<UpdateRequest />}
+                    />
+                    <Route
+                      path="/update-request/:id"
+                      element={<UpdateRequest />}
+                    />
 
-                <Route path="/google-book/:id" element={<BookDetail />} />
-                <Route path="/google-books" element={<BooksList />} />
-                <Route path="/post-book/:id" element={<PostGoogleBook />} />
-              </Routes>
-          </Wrapper>
-            </Router>
+                    <Route path="/google-book/:id" element={<BookDetail />} />
+                    <Route path="/google-books" element={<BooksList />} />
+                    <Route path="/post-book/:id" element={<PostGoogleBook />} />
+                  </Routes>
+                </Wrapper>
+              </Router>
+            </GetRequestsProvider>
+          </GetBooksProvider>
         ) : (
           <>
-
-          
-
-             <Router>
+            <Router>
               <Routes>
                 <Route path="/" exact element={<LandingPage />} />
                 <Route path="/auth" exact element={<Auth />} />
               </Routes>
-            </Router> 
+            </Router>
           </>
         )}
       </>

@@ -1,5 +1,5 @@
 
-const BASE_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:3001";
+const BASE_URL = "https://bookly-7blh.onrender.com" ;
 
 
 module.exports = {

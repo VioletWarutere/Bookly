@@ -3,17 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { GetBooksProvider } from '../src/context/Getbooks';
-import { GetRequestsProvider } from './context/Getrequests';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <GetBooksProvider >
-      <GetRequestsProvider >
+   
       <App />
-      </GetRequestsProvider>
-    </GetBooksProvider>
+      
   </React.StrictMode>
 );
 
