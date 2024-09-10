@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from 'axios';
+import '../cssFiles/Wrapper.css'
 import { BASE_URL } from "../utils/backend_services";
 import Cookies from 'js-cookie';
 
@@ -72,7 +72,7 @@ const Favorites = () => {
         if(response.ok){
           console.log("Recommendations fetched successfully!");
           console.log(response.json());
-          window.location.replace('/');
+          window.location.replace('/books/myBooks');
         }
         
     } catch (error) {
@@ -92,10 +92,14 @@ const Favorites = () => {
 
   return (
     <div className="" >
-      <div>
+      <form action="" onSubmit={handleSubmit} className="text-center mb-5">
+      <div className="favorites-top sticky-content">
             <h1 className="fw-bold fs-4">Pick Your Favorite Genres</h1>
+            <button className="btn btn-dark" >
+            Submit preferences
+        </button>
           </div>
-      <form action="" onSubmit={handleSubmit} className="text-center">
+        
         <div className="row ">
           {genres.map((genre) => {
             return (
@@ -115,9 +119,7 @@ const Favorites = () => {
             );
           })}
         </div>
-        <button className="btn btn-dark my-2" >
-            Submit preferences
-        </button>
+        
       </form>
     </div>
   );

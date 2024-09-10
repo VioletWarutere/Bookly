@@ -12,6 +12,11 @@
         justify-content: center;
         align-items: center;
     }
+    .navbar-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
     .top-mobile{
         display: flex;
         flex-direction: row;
@@ -57,6 +62,14 @@
          
     }
     .collection-top{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        padding: 16px 0;
+        
+      }
+    .favorites-top{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -117,6 +130,15 @@
         padding: 16px 0;
         
       }
+    .favorites-top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+        background-color: var(--secondary-color);
+        
+      }
+      
       .explore-button{
         display: none;
       }

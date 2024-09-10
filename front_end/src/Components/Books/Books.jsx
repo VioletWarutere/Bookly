@@ -13,7 +13,7 @@ const Books = () => {
   return (
   <>
           <div>
-            <h1 className="fw-bold py-3">Popular Books</h1>
+            <h1 className="fw-bold py-3">Community Books</h1>
           </div>
           <BookCards/>
       </>  

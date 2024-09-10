@@ -15,7 +15,7 @@ const TopBar = () => {
       <div className="top">
         <div className="top-mobile">
           <a className="logo-mobile" href="/" style={{ textDecoration: "none" }}>
-          <h3 className=" text-end topLink-mobile">VioLibrary</h3>
+          <h3 className=" text-end topLink-mobile">Bookly</h3>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="18"
@@ -86,7 +86,7 @@ const TopBar = () => {
       <div className="bottom DESKTOP">
       <div className="topSection">
         <a className="logo" href="/" style={{ textDecoration: "none" }}>
-          <h3 className="fs-2 fw-light text-end topLink">VioLibrary</h3>
+          <h3 className="fs-2 fw-light text-end topLink">Bookly</h3>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="21"

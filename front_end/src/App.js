@@ -29,6 +29,7 @@ import BooksList from "./Components/pageSections/Google_API/Main";
 import DeleteComment from "./Components/pageSections/Comments_Likes/DeleteComment";
 import Likes from "./Components/pageSections/Comments_Likes/Likes";
 import DeleteMyBook from "./Components/Books/DeleteMyBook";
+import Login from "./Components/auth/Login";
 
 function App() {
   const token = Cookies.get("token");
@@ -44,6 +45,7 @@ function App() {
                   <Routes>
                     <Route path="/" exact element={<HomePage />} />
                     <Route path="/auth" exact element={<Auth />} />
+                    <Route path="/login" exact element={<Login />} />
                     <Route
                       path="/recommendations"
                       exact

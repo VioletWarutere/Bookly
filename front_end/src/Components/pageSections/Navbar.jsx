@@ -6,20 +6,10 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg fixed-top  navbar-light">
       <div className="container">
         <a className="navbar-brand display-2" href="#">
-          
+          Bookly
         </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-mdb-toggle="collapse"
-          data-mdb-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i className="fas fa-bars"></i>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+       
+        <div >
           <ul className="navbar-nav ms-auto align-items-center">
             <li className="nav-item ms-3">
               <a className="btn btn-dark btn-large btn-rounded" href="/auth">
@@ -27,7 +17,7 @@ const Navbar = () => {
               </a>
             </li>
             <li className="nav-item ms-3">
-              <a className="btn btn-light btn-large btn-rounded" href="/auth">
+              <a className="btn btn-light btn-large btn-rounded" href="/login">
                 Login
               </a>
             </li>
