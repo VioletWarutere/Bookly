@@ -13,12 +13,7 @@ const Navbar = () => {
           <ul className="navbar-nav ms-auto align-items-center">
             <li className="nav-item ms-3">
               <a className="btn btn-dark btn-large btn-rounded" href="/auth">
-                Create An Account
-              </a>
-            </li>
-            <li className="nav-item ms-3">
-              <a className="btn btn-light btn-large btn-rounded" href="/login">
-                Login
+                Account
               </a>
             </li>
           </ul>
