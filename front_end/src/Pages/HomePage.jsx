@@ -59,6 +59,14 @@ if(!books){
   const commaAdd = (array) => {
     return array.map(toTitleCase).join(", ");
   };
+
+  const truncateParagraph = (paragraph, wordLimit) => {
+    const words = paragraph.split(" ");
+    return words.length <= wordLimit
+      ? paragraph
+      : words.slice(0, wordLimit).join(" ") + "...";
+  };
+
   return (
     <div className="container m-auto">
       <div className="row m-auto">
@@ -90,7 +98,7 @@ if(!books){
 
                   <p className="books-smalltexts">
                     <small className="text-body-secondary bold sub-texts">
-                      {commaAdd(book.genre)}
+                      {truncateParagraph(commaAdd(book.genre), 8)}
                     </small>
                     <br />
                     <small className="badge">BOOK</small>
@@ -128,7 +136,7 @@ if(!books){
 
                   <p className="books-smalltexts">
                     <small className="text-body-secondary bold sub-texts">
-                      {commaAdd(request.genre)}
+                      {truncateParagraph(commaAdd(request.genre), 8)}
                     </small>
                     <br />
                     <small className="badge">REQUEST</small>

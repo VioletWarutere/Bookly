@@ -20,11 +20,11 @@ const Book = ({ title, authors, description, image, id,categories }) => {
 
             <p className="books-smalltexts">
               <small className="text-body-secondary bold sub-texts">
-                {categories?.join(", ")}
+                {categories?.join(", ").slice(0, 10) + "..."}
               </small>
               <br />
               <small className="text-body-secondary sub-texts">
-              {description ? description.slice(0, 100) + "..." : "No description available"}
+              {description ? description.slice(0, 10) + "..." : "No description available"}
               </small>
               <br />
               
