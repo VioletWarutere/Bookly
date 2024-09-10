@@ -92,7 +92,7 @@ const BookDetail = () => {
 
                 <div
                   className="py-3"
-                  id="user-info"
+                  id="buttonGroup"
                   
                 >
                   <Link
@@ -100,6 +100,12 @@ const BookDetail = () => {
                     className="btn secondaryButton ml-3"
                   >
                     Add This Book
+                  </Link>
+                  <Link
+                    to={`/request-book/${id}`}
+                    className="btn secondaryButton ml-3"
+                  >
+                    Request For This Book
                   </Link>
                 </div>
               </div>

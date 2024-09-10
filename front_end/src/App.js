@@ -30,6 +30,7 @@ import DeleteComment from "./Components/pageSections/Comments_Likes/DeleteCommen
 import Likes from "./Components/pageSections/Comments_Likes/Likes";
 import DeleteMyBook from "./Components/Books/DeleteMyBook";
 import Login from "./Components/auth/Login";
+import RequestGoogleBook from "./Components/pageSections/Google_API/RequestGoogleBook";
 
 function App() {
   const token = Cookies.get("token");
@@ -96,6 +97,7 @@ function App() {
                     <Route path="/google-book/:id" element={<BookDetail />} />
                     <Route path="/google-books" element={<BooksList />} />
                     <Route path="/post-book/:id" element={<PostGoogleBook />} />
+                    <Route path="/request-book/:id" element={<RequestGoogleBook />} />
                   </Routes>
                 </Wrapper>
               </Router>
